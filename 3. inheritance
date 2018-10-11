@@ -1,0 +1,69 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Alena
+ * Date: 11.10.2018
+ * Time: 10:50
+ */
+class Person
+{
+    protected $name;
+    public function setName($value)
+    {
+        $this -> name = $value;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+}
+
+class Worker extends Person
+{
+    protected $age;
+    public function setAge($value)
+    {
+       $this->age = $value;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+}
+
+class Programmist extends worker
+{
+    private $skill;
+
+    public function setSkill($value)
+    {
+        $this->skill = $value;
+    }
+
+    public function getSkill()
+    {
+        return $this->skill;
+    }
+}
+
+$worker = new Worker();
+$worker->setAge(21);
+$worker->setName('Misha');
+
+echo 'Name - '.$worker-> getName().' and Age - '.$worker->getAge();
+echo '<br>';
+
+$programmist = new Programmist();
+$programmist->setAge(30);
+$programmist->setName('Alena');
+$programmist->setSkill('Middle');
+
+echo 'Name - '.$programmist-> getName().' and Age - '.$programmist->getAge().' Skill - '.$programmist->getSkill();
+echo '<br>';
+
+
+
+
+
